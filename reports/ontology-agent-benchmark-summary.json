@@ -1,0 +1,12 @@
+{
+  "count": 4,
+  "success_rate": 1.0,
+  "mean": 18.105,
+  "p50": 17.073,
+  "p90": 18.36,
+  "p95": 18.36,
+  "minimum": 15.434,
+  "maximum": 22.84,
+  "agent": "ontology",
+  "report_prefix": "ontology-agent"
+}

@@ -1,0 +1,13 @@
+{
+  "count": 8,
+  "success_rate": 1.0,
+  "mean": 17.873250000000002,
+  "p50": 17.822000000000003,
+  "p90": 21.928,
+  "p95": 21.928,
+  "minimum": 11.137,
+  "maximum": 26.751,
+  "agent": "hybrid",
+  "connection_mode": "persistent",
+  "report_prefix": "hybrid-agent-session-persistent-standard-f32"
+}

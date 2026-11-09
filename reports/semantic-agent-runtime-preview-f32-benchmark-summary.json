@@ -1,0 +1,13 @@
+{
+  "count": 8,
+  "success_rate": 1.0,
+  "mean": 20.494,
+  "p50": 20.835,
+  "p90": 25.743,
+  "p95": 25.743,
+  "minimum": 13.181,
+  "maximum": 27.128,
+  "agent": "semantic",
+  "connection_mode": "fresh",
+  "report_prefix": "semantic-agent-runtime-preview-f32"
+}

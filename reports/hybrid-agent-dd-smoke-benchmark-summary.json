@@ -1,0 +1,13 @@
+{
+  "count": 1,
+  "success_rate": 1.0,
+  "mean": 19.017,
+  "p50": 19.017,
+  "p90": 19.017,
+  "p95": 19.017,
+  "minimum": 19.017,
+  "maximum": 19.017,
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-dd-smoke"
+}

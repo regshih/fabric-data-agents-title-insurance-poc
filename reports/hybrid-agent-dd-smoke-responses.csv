@@ -1,0 +1,2 @@
+question_id,question_class,mode,connection_mode,repetition,success,criteria_recall,total_seconds,tool,capacity_sku,agent_runtime,answer
+R02,Relationship,warm,fresh,1,True,0.3333333333333333,19.017,DataAgent_title_insurance_hybrid_agent,F32,standard,"Result: ORDER000123 has 1 encumbrance meeting those criteria.  Here are the details:  1) ENC003216   - EncumbranceType: Judgment   - ExceptionCategory: ScheduleBException   - EncumbranceStatus: Open   - RequiresClearance: True   - ReleaseRecorded: False   - EncumbranceAmountCents: 35,275,442"

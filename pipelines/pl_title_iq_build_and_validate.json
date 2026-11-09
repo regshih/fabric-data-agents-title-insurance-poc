@@ -1,0 +1,30 @@
+{
+  "properties": {
+    "parameters": {},
+    "activities": [
+      {
+        "name": "BuildCuratedTables",
+        "type": "TridentNotebook",
+        "dependsOn": [],
+        "policy": {"timeout": "0.02:00:00", "retry": 1, "retryIntervalInSeconds": 30, "secureOutput": false, "secureInput": false},
+        "typeProperties": {
+          "notebookId": "__BUILD_NOTEBOOK_ID__",
+          "workspaceId": "__WORKSPACE_ID__",
+          "parameters": {"pipeline_run_id": {"value": "@pipeline().RunId", "type": "string"}}
+        }
+      },
+      {
+        "name": "ValidateDataQuality",
+        "type": "TridentNotebook",
+        "dependsOn": [{"activity": "BuildCuratedTables", "dependencyConditions": ["Succeeded"]}],
+        "policy": {"timeout": "0.02:00:00", "retry": 0, "retryIntervalInSeconds": 30, "secureOutput": false, "secureInput": false},
+        "typeProperties": {
+          "notebookId": "__VALIDATE_NOTEBOOK_ID__",
+          "workspaceId": "__WORKSPACE_ID__",
+          "parameters": {"pipeline_run_id": {"value": "@pipeline().RunId", "type": "string"}}
+        }
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,1045 @@
+{
+  "COMM000700": [
+    {
+      "commitment_id": "COMM000700",
+      "commitment_number": "SYN-CMT-0000700",
+      "issued_date": "2026-07-21",
+      "commitment_status": "Revised",
+      "requirement_count": 1,
+      "exception_count": 7,
+      "is_synthetic": true,
+      "order_id": "ORDER000700"
+    }
+  ],
+  "COMM000456_policy": [
+    {
+      "commitment_id_x": "COMM000456",
+      "policy_id": "POLICY000456",
+      "is_synthetic_x": true,
+      "policy_number": "SYN-POL-0000456",
+      "policy_type": "Owner",
+      "issued_date": "2026-08-17",
+      "policy_status": "Issued",
+      "coverage_amount_cents": 106630741,
+      "premium_amount_cents": 229037,
+      "is_synthetic_y": true,
+      "commitment_id_y": "COMM000456"
+    }
+  ],
+  "open_high_or_critical_count": 81,
+  "open_critical_by_office": {
+    "OFFICE012": 2,
+    "OFFICE006": 1
+  },
+  "top_open_counties": {
+    "Bluebird": 262,
+    "Redwood": 259,
+    "Silver Pine": 250,
+    "Lakeshore": 248,
+    "Northstar": 240
+  },
+  "average_days_open_over_30": 59.81012658227848,
+  "unresolved_required_clearance_count": 1928,
+  "issued_commitments_with_issued_policy_count": 1981,
+  "average_issued_policy_premium_dollars": 2773.7149528936743,
+  "top_open_orders": [
+    {
+      "order_id": "ORDER001656",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "days_open": 81
+    },
+    {
+      "order_id": "ORDER001012",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "days_open": 58
+    },
+    {
+      "order_id": "ORDER002634",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "days_open": 50
+    },
+    {
+      "order_id": "ORDER004733",
+      "risk_score": 70,
+      "risk_band": "High",
+      "days_open": 26
+    },
+    {
+      "order_id": "ORDER004468",
+      "risk_score": 70,
+      "risk_band": "High",
+      "days_open": 7
+    },
+    {
+      "order_id": "ORDER000937",
+      "risk_score": 70,
+      "risk_band": "High",
+      "days_open": 1
+    },
+    {
+      "order_id": "ORDER001771",
+      "risk_score": 65,
+      "risk_band": "High",
+      "days_open": 62
+    },
+    {
+      "order_id": "ORDER001471",
+      "risk_score": 60,
+      "risk_band": "High",
+      "days_open": 88
+    },
+    {
+      "order_id": "ORDER004369",
+      "risk_score": 60,
+      "risk_band": "High",
+      "days_open": 88
+    },
+    {
+      "order_id": "ORDER001421",
+      "risk_score": 60,
+      "risk_band": "High",
+      "days_open": 81
+    }
+  ],
+  "active_lien_open_order_property_count": 292,
+  "closing_2026_09_05_through_07_without_issued_commitment": [
+    {
+      "order_id": "ORDER000092",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM000092",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER000184",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM000184",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER000368",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM000368",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER000529",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM000529",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER001003",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM001003",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER001112",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM001112",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER001948",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM001948",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER002169",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002169",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER002453",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002453",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002498",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002498",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002561",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002561",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002625",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002625",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002806",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM002806",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003168",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003168",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER003417",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003417",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003487",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003487",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003889",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003889",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER003952",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003952",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003965",
+      "target_close_date": "2026-09-05",
+      "commitment_id": "COMM003965",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER004027",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004089",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004303",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004473",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004480",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004497",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004516",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004631",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004768",
+      "target_close_date": "2026-09-05",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER000349",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM000349",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER000429",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM000429",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER000431",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM000431",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER000581",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM000581",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER000773",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM000773",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER001167",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM001167",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002133",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM002133",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002449",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM002449",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER002729",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM002729",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER002974",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM002974",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER003479",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM003479",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003510",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM003510",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003780",
+      "target_close_date": "2026-09-06",
+      "commitment_id": "COMM003780",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER004140",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004168",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004221",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004318",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004404",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004539",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004589",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004670",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004767",
+      "target_close_date": "2026-09-06",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER000249",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM000249",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER001058",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM001058",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER001461",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM001461",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER001821",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM001821",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002479",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM002479",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER002630",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM002630",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER002982",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM002982",
+      "commitment_status": "Cancelled"
+    },
+    {
+      "order_id": "ORDER003012",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM003012",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER003316",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM003316",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER003573",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM003573",
+      "commitment_status": "Draft"
+    },
+    {
+      "order_id": "ORDER003635",
+      "target_close_date": "2026-09-07",
+      "commitment_id": "COMM003635",
+      "commitment_status": "Revised"
+    },
+    {
+      "order_id": "ORDER004368",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004371",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004423",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004448",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004466",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004501",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004504",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004519",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004542",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004608",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    },
+    {
+      "order_id": "ORDER004823",
+      "target_close_date": "2026-09-07",
+      "commitment_id": NaN,
+      "commitment_status": NaN
+    }
+  ],
+  "open_mismatch_and_unresolved_clearance": [
+    {
+      "order_id": "ORDER000019",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 70
+    },
+    {
+      "order_id": "ORDER000052",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 25
+    },
+    {
+      "order_id": "ORDER000157",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 66
+    },
+    {
+      "order_id": "ORDER000163",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 36
+    },
+    {
+      "order_id": "ORDER000322",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 52
+    },
+    {
+      "order_id": "ORDER000336",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 79
+    },
+    {
+      "order_id": "ORDER000400",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 42
+    },
+    {
+      "order_id": "ORDER000409",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 24
+    },
+    {
+      "order_id": "ORDER000452",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 3,
+      "days_open": 69
+    },
+    {
+      "order_id": "ORDER000927",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 58
+    },
+    {
+      "order_id": "ORDER000937",
+      "risk_score": 70,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 1
+    },
+    {
+      "order_id": "ORDER000992",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 66
+    },
+    {
+      "order_id": "ORDER001012",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1,
+      "days_open": 58
+    },
+    {
+      "order_id": "ORDER001065",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 73
+    },
+    {
+      "order_id": "ORDER001070",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 70
+    },
+    {
+      "order_id": "ORDER001295",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 64
+    },
+    {
+      "order_id": "ORDER001320",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 32
+    },
+    {
+      "order_id": "ORDER001399",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 22
+    },
+    {
+      "order_id": "ORDER001428",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 63
+    },
+    {
+      "order_id": "ORDER001471",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 88
+    },
+    {
+      "order_id": "ORDER001647",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 49
+    },
+    {
+      "order_id": "ORDER001656",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1,
+      "days_open": 81
+    },
+    {
+      "order_id": "ORDER001665",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 4
+    },
+    {
+      "order_id": "ORDER002110",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 69
+    },
+    {
+      "order_id": "ORDER002554",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 32
+    },
+    {
+      "order_id": "ORDER002634",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1,
+      "days_open": 50
+    },
+    {
+      "order_id": "ORDER002861",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 62
+    },
+    {
+      "order_id": "ORDER002902",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 58
+    },
+    {
+      "order_id": "ORDER002945",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 35
+    },
+    {
+      "order_id": "ORDER003080",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 3
+    },
+    {
+      "order_id": "ORDER003269",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 63
+    },
+    {
+      "order_id": "ORDER003547",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 47
+    },
+    {
+      "order_id": "ORDER003930",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 25
+    },
+    {
+      "order_id": "ORDER004084",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 23
+    },
+    {
+      "order_id": "ORDER004147",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 30
+    },
+    {
+      "order_id": "ORDER004235",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 43
+    },
+    {
+      "order_id": "ORDER004254",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 30
+    },
+    {
+      "order_id": "ORDER004468",
+      "risk_score": 70,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 7
+    },
+    {
+      "order_id": "ORDER004469",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 12
+    },
+    {
+      "order_id": "ORDER004537",
+      "risk_score": 50,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 2
+    },
+    {
+      "order_id": "ORDER004716",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 81
+    },
+    {
+      "order_id": "ORDER004733",
+      "risk_score": 70,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 26
+    },
+    {
+      "order_id": "ORDER004750",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 63
+    },
+    {
+      "order_id": "ORDER004776",
+      "risk_score": 60,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 75
+    }
+  ],
+  "high_or_critical_repeated_search_failure": [
+    {
+      "order_id": "ORDER001049",
+      "risk_score": 75,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1,
+      "days_open": 65
+    },
+    {
+      "order_id": "ORDER002986",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 88
+    },
+    {
+      "order_id": "ORDER001772",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 85
+    },
+    {
+      "order_id": "ORDER004248",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 80
+    },
+    {
+      "order_id": "ORDER001303",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 69
+    },
+    {
+      "order_id": "ORDER001771",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 62
+    },
+    {
+      "order_id": "ORDER004329",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 62
+    },
+    {
+      "order_id": "ORDER002894",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 54
+    },
+    {
+      "order_id": "ORDER000045",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 48
+    },
+    {
+      "order_id": "ORDER004050",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 40
+    },
+    {
+      "order_id": "ORDER000858",
+      "risk_score": 65,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 37
+    },
+    {
+      "order_id": "ORDER001433",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 70
+    },
+    {
+      "order_id": "ORDER001682",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 47
+    },
+    {
+      "order_id": "ORDER000600",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 43
+    },
+    {
+      "order_id": "ORDER000774",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 0,
+      "days_open": 41
+    },
+    {
+      "order_id": "ORDER004947",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 35
+    },
+    {
+      "order_id": "ORDER000816",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 33
+    },
+    {
+      "order_id": "ORDER001188",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 33
+    },
+    {
+      "order_id": "ORDER001555",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 31
+    },
+    {
+      "order_id": "ORDER003774",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 30
+    },
+    {
+      "order_id": "ORDER002492",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 25
+    },
+    {
+      "order_id": "ORDER003008",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 23
+    },
+    {
+      "order_id": "ORDER004562",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 18
+    },
+    {
+      "order_id": "ORDER001305",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 16
+    },
+    {
+      "order_id": "ORDER004523",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 1,
+      "days_open": 15
+    },
+    {
+      "order_id": "ORDER004352",
+      "risk_score": 55,
+      "risk_band": "High",
+      "blocking_issue_count": 2,
+      "days_open": 7
+    }
+  ],
+  "completed_commitment_without_issued_policy_count": 302,
+  "highest_average_risk_county": [
+    {
+      "county": "Silver Pine",
+      "order_count": 250,
+      "average_risk_score": 21.14,
+      "total_risk_score": 5285
+    }
+  ]
+}

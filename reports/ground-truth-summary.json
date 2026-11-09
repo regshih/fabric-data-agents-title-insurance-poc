@@ -1,0 +1,98 @@
+{
+  "as_of_date": "2026-09-01",
+  "data_is_synthetic": true,
+  "row_counts": {
+    "agent_office": 12,
+    "commitment": 4000,
+    "daily_title_operations": 1091,
+    "encumbrance": 6005,
+    "order_risk_snapshot": 5000,
+    "party": 7500,
+    "policy": 3500,
+    "property": 5000,
+    "property_title_summary": 5000,
+    "recorded_instrument": 12000,
+    "rel_commitment_policy": 3500,
+    "rel_instrument_encumbrance": 6005,
+    "rel_order_commitment": 4000,
+    "rel_order_encumbrance": 6005,
+    "rel_order_office": 5000,
+    "rel_order_party": 6666,
+    "rel_order_property": 5000,
+    "rel_property_instrument": 12000,
+    "title_order": 5000
+  },
+  "risk_band_counts": {
+    "Critical": 11,
+    "High": 338,
+    "Low": 2709,
+    "Medium": 1942
+  },
+  "open_orders": 3246,
+  "at_risk_orders": 349,
+  "unresolved_required_clearance": 1928,
+  "issued_commitments": 2668,
+  "issued_policies": 2972,
+  "top_open_risk_orders": [
+    {
+      "order_id": "ORDER000340",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER001656",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER001012",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER004105",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000078",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000953",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER002634",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER003032",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER003313",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER004403",
+      "risk_score": 80,
+      "risk_band": "Critical",
+      "blocking_issue_count": 1
+    }
+  ]
+}

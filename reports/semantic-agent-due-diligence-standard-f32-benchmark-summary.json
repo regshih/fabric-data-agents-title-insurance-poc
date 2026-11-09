@@ -1,0 +1,13 @@
+{
+  "count": 17,
+  "success_rate": 1.0,
+  "mean": 25.856529411764704,
+  "p50": 20.859,
+  "p90": 34.663,
+  "p95": 43.806,
+  "minimum": 13.588,
+  "maximum": 73.774,
+  "agent": "semantic",
+  "connection_mode": "fresh",
+  "report_prefix": "semantic-agent-due-diligence-standard-f32"
+}

@@ -1,0 +1,13 @@
+{
+  "count": 17,
+  "success_rate": 1.0,
+  "mean": 21.012882352941176,
+  "p50": 19.728,
+  "p90": 29.477,
+  "p95": 33.475,
+  "minimum": 10.734,
+  "maximum": 43.48,
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-due-diligence-standard-f32"
+}

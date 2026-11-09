@@ -1,0 +1,13 @@
+{
+  "count": 8,
+  "success_rate": 1.0,
+  "mean": 19.35,
+  "p50": 19.476999999999997,
+  "p90": 26.12,
+  "p95": 26.12,
+  "minimum": 10.575,
+  "maximum": 28.312,
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-runtime-standard-f32"
+}

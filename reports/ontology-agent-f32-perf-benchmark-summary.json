@@ -1,0 +1,13 @@
+{
+  "count": 8,
+  "success_rate": 1.0,
+  "mean": 23.70175,
+  "p50": 23.7545,
+  "p90": 25.493,
+  "p95": 25.493,
+  "minimum": 15.677,
+  "maximum": 31.719,
+  "agent": "ontology",
+  "connection_mode": "fresh",
+  "report_prefix": "ontology-agent-f32-perf"
+}

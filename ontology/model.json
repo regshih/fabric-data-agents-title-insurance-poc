@@ -1,0 +1,23 @@
+{
+  "entities": {
+    "Property": {"table": "property", "key": "PropertyID", "columns": {"PropertyID": ["property_id", "String"], "ParcelID": ["parcel_id", "String"], "FictionalAddress": ["fictional_address", "String"], "Municipality": ["municipality", "String"], "County": ["county", "String"], "State": ["state", "String"], "PropertyType": ["property_type", "String"], "CurrentVestingType": ["current_vesting_type", "String"]}},
+    "Party": {"table": "party", "key": "PartyID", "columns": {"PartyID": ["party_id", "String"], "SyntheticDisplayName": ["synthetic_display_name", "String"], "PartyType": ["party_type", "String"], "PartyState": ["state", "String"]}},
+    "TitleOrder": {"table": "title_order", "key": "OrderID", "columns": {"OrderID": ["order_id", "String"], "OpenedDate": ["opened_date", "DateTime"], "TargetCloseDate": ["target_close_date", "DateTime"], "OrderStatus": ["order_status", "String"], "OrderType": ["order_type", "String"], "TransactionType": ["transaction_type", "String"], "Priority": ["priority", "String"], "RiskScore": ["risk_score", "BigInt"], "RiskBand": ["risk_band", "String"], "BlockingIssueCount": ["blocking_issue_count", "BigInt"], "DaysOpen": ["days_open", "BigInt"], "IsAtRisk": ["is_at_risk", "Boolean"]}},
+    "RecordedInstrument": {"table": "recorded_instrument", "key": "InstrumentID", "columns": {"InstrumentID": ["instrument_id", "String"], "InstrumentType": ["instrument_type", "String"], "RecordedDate": ["recorded_date", "DateTime"], "RecordingReference": ["recording_reference", "String"], "InstrumentStatus": ["instrument_status", "String"], "InstrumentAmountCents": ["amount_cents", "BigInt"]}},
+    "Encumbrance": {"table": "encumbrance", "key": "EncumbranceID", "columns": {"EncumbranceID": ["encumbrance_id", "String"], "EncumbranceType": ["encumbrance_type", "String"], "ExceptionCategory": ["exception_category", "String"], "EncumbranceStatus": ["encumbrance_status", "String"], "RequiresClearance": ["requires_clearance", "Boolean"], "ReleaseRecorded": ["release_recorded", "Boolean"], "EncumbranceAmountCents": ["amount_cents", "BigInt"]}},
+    "Commitment": {"table": "commitment", "key": "CommitmentID", "columns": {"CommitmentID": ["commitment_id", "String"], "CommitmentNumber": ["commitment_number", "String"], "CommitmentIssuedDate": ["issued_date", "DateTime"], "CommitmentStatus": ["commitment_status", "String"], "RequirementCount": ["requirement_count", "BigInt"], "ExceptionCount": ["exception_count", "BigInt"]}},
+    "Policy": {"table": "policy", "key": "PolicyID", "columns": {"PolicyID": ["policy_id", "String"], "PolicyNumber": ["policy_number", "String"], "PolicyType": ["policy_type", "String"], "PolicyIssuedDate": ["issued_date", "DateTime"], "PolicyStatus": ["policy_status", "String"], "CoverageAmountCents": ["coverage_amount_cents", "BigInt"], "PremiumAmountCents": ["premium_amount_cents", "BigInt"]}},
+    "AgentOffice": {"table": "agent_office", "key": "OfficeID", "columns": {"OfficeID": ["office_id", "String"], "OfficeName": ["office_name", "String"], "OfficeRegion": ["region", "String"], "ServiceTier": ["service_tier", "String"]}}
+  },
+  "relationships": {
+    "concerns": ["TitleOrder", "Property", "rel_order_property", "order_id", "property_id"],
+    "involves": ["TitleOrder", "Party", "rel_order_party", "order_id", "party_id"],
+    "has_recorded": ["Property", "RecordedInstrument", "rel_property_instrument", "property_id", "instrument_id"],
+    "has_issue": ["TitleOrder", "Encumbrance", "rel_order_encumbrance", "order_id", "encumbrance_id"],
+    "creates_or_supports": ["RecordedInstrument", "Encumbrance", "rel_instrument_encumbrance", "instrument_id", "encumbrance_id"],
+    "produces": ["TitleOrder", "Commitment", "rel_order_commitment", "order_id", "commitment_id"],
+    "results_in": ["Commitment", "Policy", "rel_commitment_policy", "commitment_id", "policy_id"],
+    "handles": ["AgentOffice", "TitleOrder", "rel_order_office", "office_id", "order_id"]
+  }
+}
+

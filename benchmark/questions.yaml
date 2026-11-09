@@ -1,0 +1,36 @@
+version: 1
+as_of_date: 2026-09-01
+questions:
+  - {id: A01, class: A, question: "What is the status and risk band of ORDER000001?", expected_route: ontology, criteria: [OrderID, OrderStatus, RiskBand]}
+  - {id: A02, class: A, question: "Which property is associated with ORDER000123?", expected_route: ontology, criteria: [OrderID, PropertyID]}
+  - {id: A03, class: A, question: "Show the target close date for ORDER000250.", expected_route: ontology, criteria: [OrderID, TargetCloseDate]}
+  - {id: A04, class: A, question: "What is the current vesting type for PROP000321?", expected_route: ontology, criteria: [PropertyID, CurrentVestingType]}
+  - {id: A05, class: A, question: "What type and status is INST000456?", expected_route: ontology, criteria: [InstrumentID, InstrumentType, InstrumentStatus]}
+  - {id: A06, class: A, question: "Is ENC000111 still open and does it require clearance?", expected_route: ontology, criteria: [EncumbranceID, EncumbranceStatus, RequiresClearance]}
+  - {id: A07, class: A, question: "What is the status of COMM000700?", expected_route: ontology, criteria: [CommitmentID, CommitmentStatus]}
+  - {id: A08, class: A, question: "What type of policy is POLICY000900?", expected_route: ontology, criteria: [PolicyID, PolicyType]}
+  - {id: B01, class: B, question: "Which unresolved encumbrances are blocking ORDER000123?", expected_route: ontology, criteria: [OrderID, EncumbranceID, EncumbranceStatus]}
+  - {id: B02, class: B, question: "Show the parties connected to ORDER000250.", expected_route: ontology, criteria: [OrderID, PartyID]}
+  - {id: B03, class: B, question: "Which office handles ORDER000777?", expected_route: ontology, criteria: [OrderID, OfficeID]}
+  - {id: B04, class: B, question: "Show instruments recorded against the property for ORDER000321.", expected_route: ontology, criteria: [OrderID, PropertyID, InstrumentID]}
+  - {id: B05, class: B, question: "Which commitment was produced by ORDER000500?", expected_route: ontology, criteria: [OrderID, CommitmentID]}
+  - {id: B06, class: B, question: "Which policy resulted from COMM000456?", expected_route: ontology, criteria: [CommitmentID, PolicyID]}
+  - {id: B07, class: B, question: "Show the recorded instrument that creates or supports ENC000600.", expected_route: ontology, criteria: [EncumbranceID, InstrumentID]}
+  - {id: B08, class: B, question: "Show the property, parties, commitment, and policy connected to ORDER000900.", expected_route: ontology, criteria: [OrderID, PropertyID, PartyID, CommitmentID, PolicyID]}
+  - {id: C01, class: C, question: "How many open title orders are high or critical risk?", expected_route: ontology, criteria: [count, RiskBand]}
+  - {id: C02, class: C, question: "How many critical orders does each agent office handle?", expected_route: ontology, criteria: [OfficeID, count]}
+  - {id: C03, class: C, question: "Which counties have the most open orders?", expected_route: ontology, criteria: [County, count]}
+  - {id: C04, class: C, question: "What is the average days open for orders past 30 days?", expected_route: ontology, criteria: [average, DaysOpen]}
+  - {id: C05, class: C, question: "How many unresolved required-clearance encumbrances exist?", expected_route: ontology, criteria: [count, RequiresClearance]}
+  - {id: C06, class: C, question: "What is the distribution of orders by risk band?", expected_route: ontology, criteria: [RiskBand, count]}
+  - {id: C07, class: C, question: "How many issued commitments have an issued policy?", expected_route: ontology, criteria: [CommitmentStatus, PolicyStatus, count]}
+  - {id: C08, class: C, question: "What is the average issued policy premium in dollars?", expected_route: ontology, criteria: [average, PremiumAmountCents]}
+  - {id: D01, class: D, question: "Which ten open orders should operations review first, and why?", expected_route: ontology, criteria: [OrderID, RiskScore, supporting_factors]}
+  - {id: D02, class: D, question: "Explain why ORDER000123 has its current risk score.", expected_route: ontology, criteria: [OrderID, RiskScore, supporting_factors, disclaimer]}
+  - {id: D03, class: D, question: "Which orders closing in the next three days lack an issued commitment?", expected_route: ontology, criteria: [OrderID, TargetCloseDate]}
+  - {id: D04, class: D, question: "Which open orders have both a vesting mismatch and unresolved required-clearance issues?", expected_route: ontology, criteria: [OrderID, supporting_factors]}
+  - {id: D05, class: D, question: "Prioritize high-risk orders with repeated search failures.", expected_route: ontology, criteria: [OrderID, RiskBand, supporting_factors]}
+  - {id: D06, class: D, question: "Which properties have active recorded liens and an open title order?", expected_route: ontology, criteria: [PropertyID, InstrumentID, OrderID]}
+  - {id: D07, class: D, question: "Find completed orders whose commitment has no connected issued policy.", expected_route: ontology, criteria: [OrderID, CommitmentID]}
+  - {id: D08, class: D, question: "Summarize the highest-risk county and the issues driving its risk.", expected_route: ontology, criteria: [County, RiskScore, supporting_factors, disclaimer]}
+

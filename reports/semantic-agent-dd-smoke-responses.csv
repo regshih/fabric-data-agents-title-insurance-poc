@@ -1,0 +1,2 @@
+question_id,question_class,mode,connection_mode,repetition,success,criteria_recall,total_seconds,tool,capacity_sku,agent_runtime,answer
+K02,KPI,warm,fresh,1,True,0.0,30.806,DataAgent_title_insurance_semantic_agent,F32,standard,There are 81 title orders with OrderStatus exactly Open in the High or Critical risk bands.

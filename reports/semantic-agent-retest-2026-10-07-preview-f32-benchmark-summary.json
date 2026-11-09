@@ -1,0 +1,26 @@
+{
+  "count": 17,
+  "successful_count": 16,
+  "failed_count": 1,
+  "success_rate": 0.9411764705882353,
+  "mean": 22.4393125,
+  "p50": 19.223,
+  "p90": 27.029,
+  "p95": 28.663,
+  "minimum": 14.065,
+  "maximum": 54.24,
+  "all_call_latency": {
+    "mean": 27.158,
+    "p50": 20.119,
+    "p90": 28.663,
+    "p95": 54.24,
+    "minimum": 14.065,
+    "maximum": 102.657
+  },
+  "failed_call_seconds": [
+    102.657
+  ],
+  "agent": "semantic",
+  "connection_mode": "fresh",
+  "report_prefix": "semantic-agent-retest-2026-10-07-preview-f32"
+}

@@ -1,0 +1,13 @@
+{
+  "count": 1,
+  "success_rate": 1.0,
+  "mean": 18.92,
+  "p50": 18.92,
+  "p90": 18.92,
+  "p95": 18.92,
+  "minimum": 18.92,
+  "maximum": 18.92,
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-smoke"
+}

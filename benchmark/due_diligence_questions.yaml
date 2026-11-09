@@ -1,0 +1,112 @@
+description: >-
+  Unambiguous cross-agent due-diligence suite. Expected patterns are grounded in the deterministic
+  local Parquet snapshot dated 2026-09-01. Each required group represents one requested fact.
+questions:
+  - id: K01
+    class: KPI
+    question: "How many active, not-completed title orders are there, counting statuses Open, Search, and CommitmentIssued?"
+    criteria: [count]
+    required_groups: ['\b3,?246\b']
+  - id: K02
+    class: KPI
+    question: "How many title orders with OrderStatus exactly Open are in the High or Critical risk bands?"
+    criteria: [count, RiskBand]
+    required_groups: ['\b81\b']
+  - id: K03
+    class: KPI
+    question: "For title orders with OrderStatus exactly Open and RiskBand exactly Critical, give the count for every office."
+    criteria: [OfficeID, count]
+    required_groups:
+      - 'OFFICE006[\s\S]{0,80}\b1\b|\b1\b[\s\S]{0,80}OFFICE006'
+      - 'OFFICE012[\s\S]{0,80}\b2\b|\b2\b[\s\S]{0,80}OFFICE012'
+  - id: K04
+    class: KPI
+    question: "Which five counties have the most title orders whose OrderStatus is exactly Open? Return county and count."
+    criteria: [County, count]
+    required_groups:
+      - 'Bluebird[\s\S]{0,60}\b262\b|\b262\b[\s\S]{0,60}Bluebird'
+      - 'Redwood[\s\S]{0,60}\b259\b|\b259\b[\s\S]{0,60}Redwood'
+      - 'Silver Pine[\s\S]{0,60}\b250\b|\b250\b[\s\S]{0,60}Silver Pine'
+      - 'Lakeshore[\s\S]{0,60}\b248\b|\b248\b[\s\S]{0,60}Lakeshore'
+      - 'Northstar[\s\S]{0,60}\b240\b|\b240\b[\s\S]{0,60}Northstar'
+  - id: K05
+    class: KPI
+    question: "What is the average DaysOpen across all orders where DaysOpen is greater than 30?"
+    criteria: [average, DaysOpen]
+    required_groups: ['\b59\.8(?:1)?\b']
+  - id: K06
+    class: KPI
+    question: "How many encumbrances have EncumbranceStatus Open, RequiresClearance true, and ReleaseRecorded false?"
+    criteria: [count, RequiresClearance]
+    required_groups: ['\b1,?928\b']
+  - id: K07
+    class: KPI
+    question: "Give the count of all title orders in each RiskBand, including completed orders."
+    criteria: [RiskBand, count]
+    required_groups:
+      - 'Critical[\s\S]{0,50}\b11\b|\b11\b[\s\S]{0,50}Critical'
+      - 'High[\s\S]{0,50}\b338\b|\b338\b[\s\S]{0,50}High'
+      - 'Medium[\s\S]{0,50}\b1,?942\b|\b1,?942\b[\s\S]{0,50}Medium'
+      - 'Low[\s\S]{0,50}\b2,?709\b|\b2,?709\b[\s\S]{0,50}Low'
+  - id: K08
+    class: KPI
+    question: "How many distinct commitments have CommitmentStatus Issued and are connected to a policy with PolicyStatus Issued?"
+    criteria: [CommitmentStatus, PolicyStatus, count]
+    required_groups: ['\b1,?981\b']
+  - id: K09
+    class: KPI
+    question: "What is the average PremiumAmountCents converted to dollars for policies with PolicyStatus exactly Issued?"
+    criteria: [average, PremiumAmountCents]
+    required_groups: ['(?:\$\s*)?2,?773\.71']
+  - id: L01
+    class: Lookup
+    question: "For ORDER000001, return OrderStatus and RiskBand."
+    criteria: [OrderStatus, RiskBand]
+    required_groups: ['\bCompleted\b', '\bMedium\b']
+  - id: L02
+    class: Lookup
+    question: "COMM000700 is a CommitmentID. What is its CommitmentStatus?"
+    criteria: [CommitmentID, CommitmentStatus]
+    required_groups: ['\bCOMM000700\b', '\bRevised\b']
+  - id: R01
+    class: Relationship
+    question: "COMM000456 is a CommitmentID. Which policy results from it? Return PolicyID, PolicyType, and PolicyStatus."
+    criteria: [CommitmentID, PolicyID]
+    required_groups: ['\bPOLICY000456\b', '\bOwner\b', '\bIssued\b']
+  - id: R02
+    class: Relationship
+    question: "For ORDER000123, list encumbrances whose EncumbranceStatus is Open, RequiresClearance is true, and ReleaseRecorded is false."
+    criteria: [OrderID, EncumbranceID, EncumbranceStatus]
+    required_groups: ['\bENC003216\b', '\bJudgment\b', '\bOpen\b']
+  - id: R03
+    class: Relationship
+    question: "Which parties are connected to ORDER000250? Return every PartyID and PartyType."
+    criteria: [OrderID, PartyID]
+    required_groups:
+      - '\bPARTY004203\b[\s\S]{0,100}\bSeller\b|\bSeller\b[\s\S]{0,100}\bPARTY004203\b'
+      - '\bPARTY002181\b[\s\S]{0,100}\bTrustee\b|\bTrustee\b[\s\S]{0,100}\bPARTY002181\b'
+  - id: D01
+    class: Decision
+    question: "Rank the ten title orders with OrderStatus exactly Open by RiskScore descending, DaysOpen descending, and OrderID ascending. Return OrderID and RiskScore."
+    criteria: [OrderID, RiskScore]
+    required_groups:
+      - '\bORDER001656\b'
+      - '\bORDER001012\b'
+      - '\bORDER002634\b'
+      - '\bORDER004733\b'
+      - '\bORDER004468\b'
+      - '\bORDER000937\b'
+      - '\bORDER001771\b'
+      - '\bORDER001471\b'
+      - '\bORDER004369\b'
+      - '\bORDER001421\b'
+  - id: D02
+    class: Decision
+    question: "Explain the deterministic risk score for ORDER000123 using its risk-driver flags. Include RiskScore and RiskBand."
+    criteria: [OrderID, RiskScore, supporting_factors]
+    required_groups: ['\b30\b', '\bMedium\b', 'unresolved[\s-]+required[\s-]+clearance|requires[\s-]+clearance']
+  - id: D03
+    class: Decision
+    question: "Among counties, which has the highest average RiskScore for title orders whose OrderStatus is exactly Open? Return county and average."
+    criteria: [County, RiskScore]
+    required_groups: ['\bSilver Pine\b', '\b21\.14\b']

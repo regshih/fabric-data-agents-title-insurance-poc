@@ -1,0 +1,74 @@
+{
+  "change": "add five fictional open tax liens requiring clearance",
+  "new_encumbrance_ids": [
+    "ENC900001",
+    "ENC900002",
+    "ENC900003",
+    "ENC900004",
+    "ENC900005"
+  ],
+  "before": [
+    {
+      "order_id": "ORDER000001",
+      "risk_score": 0,
+      "risk_band": "Low",
+      "blocking_issue_count": 0
+    },
+    {
+      "order_id": "ORDER000002",
+      "risk_score": 0,
+      "risk_band": "Low",
+      "blocking_issue_count": 0
+    },
+    {
+      "order_id": "ORDER000003",
+      "risk_score": 10,
+      "risk_band": "Low",
+      "blocking_issue_count": 0
+    },
+    {
+      "order_id": "ORDER000004",
+      "risk_score": 15,
+      "risk_band": "Low",
+      "blocking_issue_count": 0
+    },
+    {
+      "order_id": "ORDER000005",
+      "risk_score": 40,
+      "risk_band": "Medium",
+      "blocking_issue_count": 1
+    }
+  ],
+  "after": [
+    {
+      "order_id": "ORDER000001",
+      "risk_score": 30,
+      "risk_band": "Medium",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000002",
+      "risk_score": 30,
+      "risk_band": "Medium",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000003",
+      "risk_score": 40,
+      "risk_band": "Medium",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000004",
+      "risk_score": 45,
+      "risk_band": "Medium",
+      "blocking_issue_count": 1
+    },
+    {
+      "order_id": "ORDER000005",
+      "risk_score": 40,
+      "risk_band": "Medium",
+      "blocking_issue_count": 2
+    }
+  ]
+}

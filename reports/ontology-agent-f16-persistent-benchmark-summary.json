@@ -1,0 +1,13 @@
+{
+  "count": 8,
+  "success_rate": 1.0,
+  "mean": 24.340249999999997,
+  "p50": 19.924999999999997,
+  "p90": 33.934,
+  "p95": 33.934,
+  "minimum": 13.917,
+  "maximum": 53.373,
+  "agent": "ontology",
+  "connection_mode": "persistent",
+  "report_prefix": "ontology-agent-f16-persistent"
+}

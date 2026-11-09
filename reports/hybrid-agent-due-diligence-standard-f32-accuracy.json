@@ -1,0 +1,197 @@
+{
+  "responses_file": "reports\\hybrid-agent-due-diligence-standard-f32-responses.csv",
+  "count": 17,
+  "correct": 17,
+  "partial": 0,
+  "incorrect": 0,
+  "full_accuracy": 1.0,
+  "partial_credit_accuracy": 1.0,
+  "mean_fact_recall": 1.0,
+  "by_class": {
+    "Decision": {
+      "correct": 3
+    },
+    "KPI": {
+      "correct": 9
+    },
+    "Lookup": {
+      "correct": 2
+    },
+    "Relationship": {
+      "correct": 3
+    }
+  },
+  "questions": [
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 15.812
+    },
+    {
+      "question_id": "K02",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 25.504
+    },
+    {
+      "question_id": "K03",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 2,
+      "required_facts": 2,
+      "fact_recall": 1.0,
+      "total_seconds": 29.477
+    },
+    {
+      "question_id": "K04",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 5,
+      "required_facts": 5,
+      "fact_recall": 1.0,
+      "total_seconds": 21.903
+    },
+    {
+      "question_id": "K05",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 15.493
+    },
+    {
+      "question_id": "K06",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 10.734
+    },
+    {
+      "question_id": "K07",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 4,
+      "required_facts": 4,
+      "fact_recall": 1.0,
+      "total_seconds": 20.835
+    },
+    {
+      "question_id": "K08",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 33.475
+    },
+    {
+      "question_id": "K09",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "total_seconds": 20.207
+    },
+    {
+      "question_id": "L01",
+      "question_class": "Lookup",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 2,
+      "required_facts": 2,
+      "fact_recall": 1.0,
+      "total_seconds": 13.862
+    },
+    {
+      "question_id": "L02",
+      "question_class": "Lookup",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 2,
+      "required_facts": 2,
+      "fact_recall": 1.0,
+      "total_seconds": 16.16
+    },
+    {
+      "question_id": "R01",
+      "question_class": "Relationship",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 3,
+      "required_facts": 3,
+      "fact_recall": 1.0,
+      "total_seconds": 14.179
+    },
+    {
+      "question_id": "R02",
+      "question_class": "Relationship",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 3,
+      "required_facts": 3,
+      "fact_recall": 1.0,
+      "total_seconds": 16.623
+    },
+    {
+      "question_id": "R03",
+      "question_class": "Relationship",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 2,
+      "required_facts": 2,
+      "fact_recall": 1.0,
+      "total_seconds": 19.728
+    },
+    {
+      "question_id": "D01",
+      "question_class": "Decision",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 10,
+      "required_facts": 10,
+      "fact_recall": 1.0,
+      "total_seconds": 20.544
+    },
+    {
+      "question_id": "D02",
+      "question_class": "Decision",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 3,
+      "required_facts": 3,
+      "fact_recall": 1.0,
+      "total_seconds": 43.48
+    },
+    {
+      "question_id": "D03",
+      "question_class": "Decision",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 2,
+      "required_facts": 2,
+      "fact_recall": 1.0,
+      "total_seconds": 19.203
+    }
+  ],
+  "method": "Case-insensitive regex matching against required deterministic facts. A human review remains necessary to detect contradictory extra claims."
+}

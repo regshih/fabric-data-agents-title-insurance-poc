@@ -1,0 +1,13 @@
+{
+  "count": 1,
+  "success_rate": 1.0,
+  "mean": 23.002,
+  "p50": 23.002,
+  "p90": 23.002,
+  "p95": 23.002,
+  "minimum": 23.002,
+  "maximum": 23.002,
+  "agent": "semantic",
+  "connection_mode": "fresh",
+  "report_prefix": "semantic-agent-smoke"
+}

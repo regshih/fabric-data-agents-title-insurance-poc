@@ -1,0 +1,23 @@
+{
+  "algorithm": "sha256(title-iq:{kind}:{name}) first 8 bytes, modulo 8e18 plus 1e15; UUIDv5 URL namespace for bindings",
+  "entities": {
+    "Property": "602877784972836367",
+    "Party": "2454517174190476449",
+    "TitleOrder": "355270666675181579",
+    "RecordedInstrument": "6087165803448208554",
+    "Encumbrance": "76983139149133325",
+    "Commitment": "4151462420104509813",
+    "Policy": "3218710545747300203",
+    "AgentOffice": "4577662162863381500"
+  },
+  "relationships": {
+    "concerns": "1243908442401177464",
+    "involves": "1246827343892648642",
+    "has_recorded": "5667450050665720279",
+    "has_issue": "6748603102477635221",
+    "creates_or_supports": "3381752524268352524",
+    "produces": "3403491663732828881",
+    "results_in": "7905760299172909322",
+    "handles": "1546385625823201306"
+  }
+}

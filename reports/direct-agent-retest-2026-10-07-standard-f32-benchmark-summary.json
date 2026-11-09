@@ -1,0 +1,24 @@
+{
+  "count": 17,
+  "successful_count": 17,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 20.639411764705883,
+  "p50": 18.498,
+  "p90": 30.305,
+  "p95": 31.186,
+  "minimum": 13.294,
+  "maximum": 35.384,
+  "all_call_latency": {
+    "mean": 20.639411764705883,
+    "p50": 18.498,
+    "p90": 30.305,
+    "p95": 31.186,
+    "minimum": 13.294,
+    "maximum": 35.384
+  },
+  "failed_call_seconds": [],
+  "agent": "direct",
+  "connection_mode": "fresh",
+  "report_prefix": "direct-agent-retest-2026-10-07-standard-f32"
+}

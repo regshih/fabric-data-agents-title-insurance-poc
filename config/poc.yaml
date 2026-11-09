@@ -1,0 +1,29 @@
+project:
+  name: fabric-iq-title-insurance-poc
+  repository: regshih/fabric-data-agents-title-insurance-poc
+azure:
+  subscription_id: <subscription-id>
+  tenant_id: <tenant-id>
+  resource_group: rg-fabric-iq-title-poc-westus3
+  region: westus3
+fabric:
+  capacity_name: fabrictitleiqpoc
+  starting_sku: F16
+  maximum_test_sku: F64
+  workspace_name: fabric-iq-title-insurance-poc
+  domain_name: Title Insurance Analytics
+  lakehouse_name: title_iq_lh
+  semantic_model_name: title_iq_sm
+  ontology_name: title_insurance_ontology
+  data_agent_name: title_insurance_iq_agent
+  semantic_data_agent_name: title_insurance_semantic_agent
+  hybrid_data_agent_name: title_insurance_hybrid_agent
+  pipeline_name: pl_title_iq_build_and_validate
+data:
+  seed: 42
+  as_of_date: 2026-09-01
+  tier: fast
+performance:
+  target_p50_seconds: 15
+  target_p95_seconds: 30
+  max_error_rate_percent: 2

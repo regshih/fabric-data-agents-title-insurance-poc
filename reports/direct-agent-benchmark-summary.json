@@ -1,0 +1,12 @@
+{
+  "count": 32,
+  "success_rate": 1.0,
+  "mean": 18.6463125,
+  "p50": 17.579,
+  "p90": 23.926,
+  "p95": 25.068,
+  "minimum": 11.649,
+  "maximum": 42.631,
+  "agent": "direct",
+  "report_prefix": "direct-agent"
+}

@@ -1,0 +1,13 @@
+{
+  "count": 17,
+  "success_rate": 1.0,
+  "mean": 16.604882352941175,
+  "p50": 14.717,
+  "p90": 19.313,
+  "p95": 26.22,
+  "minimum": 11.796,
+  "maximum": 35.597,
+  "agent": "direct",
+  "connection_mode": "fresh",
+  "report_prefix": "direct-agent-due-diligence-standard-f32"
+}

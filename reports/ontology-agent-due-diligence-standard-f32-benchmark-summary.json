@@ -1,0 +1,13 @@
+{
+  "count": 17,
+  "success_rate": 1.0,
+  "mean": 17.927176470588236,
+  "p50": 16.013,
+  "p90": 20.243,
+  "p95": 25.348,
+  "minimum": 13.952,
+  "maximum": 36.229,
+  "agent": "ontology",
+  "connection_mode": "fresh",
+  "report_prefix": "ontology-agent-due-diligence-standard-f32"
+}
