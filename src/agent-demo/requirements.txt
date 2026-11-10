@@ -2,4 +2,4 @@
 azure-functions>=1.24,<2
 azure-identity>=1.25,<2
 azure-keyvault-secrets>=4.11,<5
-mcp==2.1.1
+mcp==2.3.0
