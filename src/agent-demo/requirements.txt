@@ -1,5 +1,5 @@
 # The Python worker is supplied by Azure Functions.
-azure-functions>=1.24,<2
+azure-functions>=2.3.0,<3
 azure-identity>=1.25,<2
 azure-keyvault-secrets>=4.11,<5
 mcp==2.3.0
