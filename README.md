@@ -11,23 +11,29 @@ placeholders in `config/poc.yaml` or `.env` with your own values.
 
 ## Results
 
-A 17-question ground-truth suite ran against all four published agents on the Standard runtime at F32.
+The same 17-question ground-truth suite (nine KPIs, two lookups, three relationship questions, three
+operational decisions) ran once per question against all four published agents on the Standard runtime
+at F32, first in September 2026 and again in October 2026.
 
-| Agent setup | Strict accuracy | Mean latency |
-|---|---|---|
-| Lakehouse-only | 88.2% | 16.60 s |
-| Ontology-only | 82.4% | 17.93 s |
-| Semantic-model-only | 82.4% | 25.86 s |
-| Hybrid (semantic model + Ontology) | 100% | 21.01 s |
+| Agent setup | September strict accuracy | October strict accuracy | October mean latency |
+|---|---|---|---|
+| Lakehouse-only | 15/17 | 15/17 | 20.64 s |
+| Ontology-only | 14/17 | 15/17 | 19.69 s |
+| Semantic-model-only | 14/17 | **16/17** | 20.67 s |
+| Hybrid (semantic model + Ontology) | **17/17** | 15/17 | 21.51 s |
 
-- The semantic-model agent got every KPI right but lacked some relationship fields; the hybrid recovered
-  them through the Ontology.
+- The hybrid agent's perfect September score did not repeat. In October it falsely denied a real
+  commitment-to-policy link and gave an unsupported risk explanation.
+- In October, the semantic-model-only agent was the strongest for governed KPIs and decisions. It can't
+  answer questions about entities outside its selected model, such as parties.
 - Capacity is not a linear latency control: the same prompts averaged 28.79 s at F16, 23.70 s at F32,
   and 28.77 s at F64.
-- These are single-run POC results, not a production certification or SLA.
+- The Preview runtime did not beat Standard on accuracy, so the agents stay on Standard.
+- Each run is one call per question, not a production certification or SLA. Results changed between
+  runs with no configuration changes, so re-run the suite before relying on any one result.
 
-Details: [four-agent due-diligence report](reports/data-agent-due-diligence-comparison.md),
-[October 2026 retest](reports/data-agent-retest-2026-10-07.md) (Standard vs Preview runtimes),
+Details: [October 2026 retest](reports/data-agent-retest-2026-10-07.md) (current),
+[September baseline](reports/data-agent-due-diligence-comparison.md),
 [capacity comparison](reports/capacity-performance-comparison.md),
 [Direct Lake Execute Queries resolution](reports/direct-lake-execute-queries-resolution.md), and
 [validation and limitations](docs/validation-and-limitations.md).

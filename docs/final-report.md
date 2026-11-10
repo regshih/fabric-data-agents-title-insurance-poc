@@ -35,6 +35,8 @@ Managed OneLake tables, notebook jobs, pipeline orchestration, Direct Lake seman
 
 The earlier exploratory 32-question suite exposed ambiguity in both prompts and business definitions. A stricter 17-question ground-truth suite was then run identically against all four Standard agents at F32. Strict accuracy was 88.2% Lakehouse-only, 82.4% Ontology-only, 82.4% semantic-model-only, and 100% hybrid. The semantic agent was perfect on all nine KPIs but intentionally lacked some relationship fields; the hybrid recovered those relationships through the Ontology. See `reports/data-agent-due-diligence-comparison.md` and the raw response CSVs.
 
+**Update, October 2026:** a retest of the same suite did not reproduce the hybrid result (15/17); the semantic-model-only agent scored highest (16/17). See `reports/data-agent-retest-2026-10-07.md`.
+
 ## Agent performance
 
 All 68 main comparison calls returned through MCP. Mean end-to-end latency was 16.60 seconds Lakehouse-only, 17.93 seconds Ontology-only, 25.86 seconds semantic-model-only, and 21.01 seconds hybrid. A controlled hybrid session-reuse sample improved the mean from 19.35 to 17.87 seconds (7.6%) while remaining 8/8 correct. This is suitable for a progress-aware POC, not instant chat.
