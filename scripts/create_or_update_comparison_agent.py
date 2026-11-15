@@ -167,9 +167,31 @@ def main() -> None:
         state_runtime_key = "hybrid_agent_runtime"
         published_key = "hybrid_agent_published"
 
-    item = ensure_agent(client, workspace_id, name, description)
+    if args.agent == "hybrid":
+        item = client.find_item(workspace_id, name, "DataAgent")
+        if item is None:
+            raise RuntimeError(
+                "Create the hybrid agent with Ontology context through the Fabric data "
+                "agent experience before using this legacy configuration script."
+            )
+    else:
+        item = ensure_agent(client, workspace_id, name, description)
     agent_id = item["id"]
     base = f"workspaces/{workspace_id}/dataAgents/{agent_id}"
+    ontology_source = None
+    if args.agent == "hybrid":
+        # The legacy POST /staging/datasources path now rejects Ontology items.
+        # Fail before changing staging settings or the semantic-model selection.
+        sources = values(client.request("GET", f"{base}/staging/datasources"))
+        ontology_source = find_source(sources, state["ontology_id"])
+        if ontology_source is None:
+            raise RuntimeError(
+                "Hybrid republish requires Ontology context, but this agent has no legacy "
+                "Ontology staging source. Fabric now blocks adding one through this API "
+                "(OntologyAddAsDataSourceBlocked). Add Ontology through the Fabric data "
+                "agent Sources > Add sources > Add an ontology experience, and migrate "
+                "this script to the supported context configuration before republishing."
+            )
     instructions = instructions_path.read_text(encoding="utf-8")
     settings = client.request(
         "PATCH",
@@ -191,12 +213,7 @@ def main() -> None:
     source_results = [{"name": "title_iq_sm", "id": semantic_source["id"], **schema}]
 
     if args.agent == "hybrid":
-        ontology_source = ensure_fabric_item_source(
-            client,
-            base,
-            workspace_id,
-            state["ontology_id"],
-        )
+        assert ontology_source is not None
         metadata = client.request(
             "PATCH",
             f"{base}/staging/datasources/{ontology_source['id']}",

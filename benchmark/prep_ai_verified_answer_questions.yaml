@@ -1,0 +1,14 @@
+description: >-
+  Paraphrases of the published Open Title Orders Verified Answer trigger.
+  The exact trigger is K01 in due_diligence_questions.yaml.
+questions:
+  - id: V01
+    class: KPI
+    question: "How many title orders are currently active across Open, Search, and CommitmentIssued statuses?"
+    criteria: [count]
+    required_groups: ['\b3,?246\b']
+  - id: V02
+    class: KPI
+    question: "What is the total number of title orders that have not been completed?"
+    criteria: [count]
+    required_groups: ['\b3,?246\b']

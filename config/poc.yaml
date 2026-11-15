@@ -15,6 +15,7 @@ fabric:
   lakehouse_name: title_iq_lh
   semantic_model_name: title_iq_sm
   ontology_name: title_insurance_ontology
+  ontology_context_agent_name: title_insurance_ontology_context_agent
   data_agent_name: title_insurance_iq_agent
   semantic_data_agent_name: title_insurance_semantic_agent
   hybrid_data_agent_name: title_insurance_hybrid_agent

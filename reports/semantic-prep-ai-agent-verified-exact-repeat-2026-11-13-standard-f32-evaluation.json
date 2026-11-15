@@ -1,0 +1,73 @@
+{
+  "responses_file": "reports\\semantic-prep-ai-agent-verified-exact-repeat-2026-11-13-standard-f32-responses.csv",
+  "count": 5,
+  "correct": 5,
+  "partial": 0,
+  "incorrect": 0,
+  "full_accuracy": 1.0,
+  "partial_credit_accuracy": 1.0,
+  "mean_fact_recall": 1.0,
+  "by_class": {
+    "KPI": {
+      "correct": 5
+    }
+  },
+  "questions": [
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 1,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "order_correct": null,
+      "total_seconds": 9.345
+    },
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 2,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "order_correct": null,
+      "total_seconds": 8.688
+    },
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 3,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "order_correct": null,
+      "total_seconds": 7.891
+    },
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 4,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "order_correct": null,
+      "total_seconds": 5.596
+    },
+    {
+      "question_id": "K01",
+      "question_class": "KPI",
+      "repetition": 5,
+      "result": "correct",
+      "matched_facts": 1,
+      "required_facts": 1,
+      "fact_recall": 1.0,
+      "order_correct": null,
+      "total_seconds": 9.759
+    }
+  ],
+  "method": "Case-insensitive regex matching against required deterministic facts, with exact first-mention identifier ordering for ranked questions. A human review remains necessary to detect contradictory extra claims."
+}

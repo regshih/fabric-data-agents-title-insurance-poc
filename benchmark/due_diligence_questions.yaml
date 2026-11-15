@@ -33,7 +33,7 @@ questions:
     class: KPI
     question: "What is the average DaysOpen across all orders where DaysOpen is greater than 30?"
     criteria: [average, DaysOpen]
-    required_groups: ['\b59\.8(?:1)?\b']
+    required_groups: ['\b59\.8(?:1(?:0126)?)?\b']
   - id: K06
     class: KPI
     question: "How many encumbrances have EncumbranceStatus Open, RequiresClearance true, and ReleaseRecorded false?"
@@ -89,6 +89,17 @@ questions:
     class: Decision
     question: "Rank the ten title orders with OrderStatus exactly Open by RiskScore descending, DaysOpen descending, and OrderID ascending. Return OrderID and RiskScore."
     criteria: [OrderID, RiskScore]
+    expected_order:
+      - ORDER001656
+      - ORDER001012
+      - ORDER002634
+      - ORDER004733
+      - ORDER004468
+      - ORDER000937
+      - ORDER001771
+      - ORDER001471
+      - ORDER004369
+      - ORDER001421
     required_groups:
       - '\bORDER001656\b'
       - '\bORDER001012\b'
@@ -109,4 +120,4 @@ questions:
     class: Decision
     question: "Among counties, which has the highest average RiskScore for title orders whose OrderStatus is exactly Open? Return county and average."
     criteria: [County, RiskScore]
-    required_groups: ['\bSilver Pine\b', '\b21\.14\b']
+    required_groups: ['\bSilver Pine\b', '\b21\.140*\b']

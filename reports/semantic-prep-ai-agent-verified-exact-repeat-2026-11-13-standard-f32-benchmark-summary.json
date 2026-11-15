@@ -1,0 +1,24 @@
+{
+  "count": 5,
+  "successful_count": 5,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 8.2558,
+  "p50": 8.688,
+  "p90": 9.345,
+  "p95": 9.345,
+  "minimum": 5.596,
+  "maximum": 9.759,
+  "all_call_latency": {
+    "mean": 8.2558,
+    "p50": 8.688,
+    "p90": 9.345,
+    "p95": 9.345,
+    "minimum": 5.596,
+    "maximum": 9.759
+  },
+  "failed_call_seconds": [],
+  "agent": "prep_ai",
+  "connection_mode": "fresh",
+  "report_prefix": "semantic-prep-ai-agent-verified-exact-repeat-2026-11-13-standard-f32"
+}

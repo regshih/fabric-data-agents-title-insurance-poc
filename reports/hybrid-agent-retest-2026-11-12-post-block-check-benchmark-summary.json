@@ -1,0 +1,24 @@
+{
+  "count": 1,
+  "successful_count": 1,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 20.794,
+  "p50": 20.794,
+  "p90": 20.794,
+  "p95": 20.794,
+  "minimum": 20.794,
+  "maximum": 20.794,
+  "all_call_latency": {
+    "mean": 20.794,
+    "p50": 20.794,
+    "p90": 20.794,
+    "p95": 20.794,
+    "minimum": 20.794,
+    "maximum": 20.794
+  },
+  "failed_call_seconds": [],
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-retest-2026-11-12-post-block-check"
+}

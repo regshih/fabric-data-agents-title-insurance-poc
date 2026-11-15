@@ -10,6 +10,23 @@ from pathlib import Path
 import yaml
 
 
+def normalize_answer(answer: str) -> str:
+    """Make escaped line breaks in MCP resource representations scoreable as text."""
+    return answer.replace("\\r\\n", "\n").replace("\\n", "\n").replace("\\t", "\t")
+
+
+def check_expected_order(answer: str, expected_order: list[str]) -> bool:
+    answer = normalize_answer(answer)
+    seen: set[str] = set()
+    actual_order: list[str] = []
+    for identifier in re.findall(r"\bORDER\d{6}\b", answer, flags=re.IGNORECASE):
+        identifier = identifier.upper()
+        if identifier not in seen:
+            seen.add(identifier)
+            actual_order.append(identifier)
+    return actual_order == expected_order
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Score Data Agent answers against deterministic facts")
     parser.add_argument("responses", type=Path)
@@ -23,11 +40,13 @@ def main() -> None:
     scored = []
     for row in rows:
         question = expected[row["question_id"]]
-        answer = row["answer"]
+        answer = normalize_answer(row["answer"])
         groups = question["required_groups"]
         matches = [bool(re.search(pattern, answer, flags=re.IGNORECASE)) for pattern in groups]
         matched = sum(matches)
-        if row["success"].lower() != "true" or matched == 0:
+        expected_order = question.get("expected_order")
+        order_correct = check_expected_order(answer, expected_order) if expected_order else None
+        if row["success"].lower() != "true" or matched == 0 or order_correct is False:
             result = "incorrect"
         elif matched == len(groups):
             result = "correct"
@@ -42,6 +61,7 @@ def main() -> None:
                 "matched_facts": matched,
                 "required_facts": len(groups),
                 "fact_recall": matched / len(groups),
+                "order_correct": order_correct,
                 "total_seconds": float(row["total_seconds"]),
             }
         )
@@ -65,7 +85,8 @@ def main() -> None:
         "by_class": {key: dict(value) for key, value in sorted(class_counts.items())},
         "questions": scored,
         "method": (
-            "Case-insensitive regex matching against required deterministic facts. "
+            "Case-insensitive regex matching against required deterministic facts, with exact "
+            "first-mention identifier ordering for ranked questions. "
             "A human review remains necessary to detect contradictory extra claims."
         ),
     }

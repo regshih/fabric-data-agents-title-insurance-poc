@@ -1,0 +1,24 @@
+{
+  "count": 17,
+  "successful_count": 17,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 16.56229411764706,
+  "p50": 15.484,
+  "p90": 21.628,
+  "p95": 23.167,
+  "minimum": 11.255,
+  "maximum": 29.156,
+  "all_call_latency": {
+    "mean": 16.56229411764706,
+    "p50": 15.484,
+    "p90": 21.628,
+    "p95": 23.167,
+    "minimum": 11.255,
+    "maximum": 29.156
+  },
+  "failed_call_seconds": [],
+  "agent": "context",
+  "connection_mode": "fresh",
+  "report_prefix": "ontology-context-agent-trial-2026-11-13-preview-f32"
+}

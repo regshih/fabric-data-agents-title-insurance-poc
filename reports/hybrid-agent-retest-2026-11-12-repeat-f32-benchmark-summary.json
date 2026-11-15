@@ -1,0 +1,24 @@
+{
+  "count": 4,
+  "successful_count": 4,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 21.71125,
+  "p50": 19.6355,
+  "p90": 19.645,
+  "p95": 19.645,
+  "minimum": 19.042,
+  "maximum": 28.532,
+  "all_call_latency": {
+    "mean": 21.71125,
+    "p50": 19.6355,
+    "p90": 19.645,
+    "p95": 19.645,
+    "minimum": 19.042,
+    "maximum": 28.532
+  },
+  "failed_call_seconds": [],
+  "agent": "hybrid",
+  "connection_mode": "fresh",
+  "report_prefix": "hybrid-agent-retest-2026-11-12-repeat-f32"
+}

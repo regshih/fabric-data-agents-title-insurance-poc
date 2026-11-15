@@ -13,26 +13,48 @@ placeholders in `config/poc.yaml` or `.env` with your own values.
 
 The same 17-question ground-truth suite (nine KPIs, two lookups, three relationship questions, three
 operational decisions) ran once per question against all four published agents on the Standard runtime
-at F32, first in September 2026 and again in October 2026.
+at F32: in September, October, and November 2026.
 
-| Agent setup | September strict accuracy | October strict accuracy | October mean latency |
-|---|---|---|---|
-| Lakehouse-only | 15/17 | 15/17 | 20.64 s |
-| Ontology-only | 14/17 | 15/17 | 19.69 s |
-| Semantic-model-only | 14/17 | **16/17** | 20.67 s |
-| Hybrid (semantic model + Ontology) | **17/17** | 15/17 | 21.51 s |
+| Agent setup | September | October | November 12 | November mean latency |
+|---|---|---|---|---|
+| Lakehouse-only | 15/17 | 15/17 | 15/17 | **11.28 s** |
+| Ontology-only | 14/17 | 15/17 | 14/17 | 13.13 s |
+| Semantic-model-only | 14/17 | **16/17** | **16/17** | 13.07 s |
+| Hybrid (semantic model + Ontology) | **17/17** | 15/17 | **16/17** | 14.21 s |
 
-- The hybrid agent's perfect September score did not repeat. In October it falsely denied a real
-  commitment-to-policy link and gave an unsupported risk explanation.
-- In October, the semantic-model-only agent was the strongest for governed KPIs and decisions. It can't
+October and November use the tightened scorer, which also checks the requested ranking order.
+
+- The hybrid agent's perfect September score has not repeated. In November it scored 16/17, but the
+  party-relationship question passed only 1 of 4 calls across the full run and follow-up checks.
+- The semantic-model-only agent stayed the most dependable: 16/17 in October and November. It can't
   answer questions about entities outside its selected model, such as parties.
+- All four agents were 33-45% faster in November than in October on the same F32 capacity. One run
+  per question can't attribute that to a Fabric release.
+
+### November follow-up experiments
+
+| Experiment | Runtime | Result |
+|---|---|---|
+| New Ontology-as-context agent (Nov 13) | Preview | **17/17**, 16.56 s mean; 9/9 on three previously unstable questions |
+| Same agent, rerun (Nov 14) | Preview | 15/17 after human review |
+| Migrated, new-experience (TMDL) Ontology (Nov 14) | Preview | 15/17 after human review; one call failed. No accuracy gain over the original Ontology |
+| Semantic model with Prep for AI, before and after one Verified Answer (Nov 13) | Standard | 16/17 both times. No measurable accuracy or latency gain |
+
+- The Ontology-as-context integration is the first setup that answered the party-relationship
+  question reliably (4 of 4 calls on Nov 13, and correct in every Nov 14 attempt). Its 17/17 did not
+  repeat the next day, so treat it like the hybrid's September score: promising, not proven.
+- The legacy way of adding an Ontology as a Data Agent source is now blocked by Fabric
+  (`OntologyAddAsDataSourceBlocked`); new work should attach the Ontology as context.
 - Capacity is not a linear latency control: the same prompts averaged 28.79 s at F16, 23.70 s at F32,
   and 28.77 s at F64.
-- The Preview runtime did not beat Standard on accuracy, so the agents stay on Standard.
 - Each run is one call per question, not a production certification or SLA. Results changed between
   runs with no configuration changes, so re-run the suite before relying on any one result.
 
-Details: [October 2026 retest](reports/data-agent-retest-2026-10-07.md) (current),
+Details: [November 12 retest](reports/data-agent-retest-2026-11-12.md) (current),
+[Ontology-as-context follow-up](reports/ontology-context-and-prep-ai-retest-2026-11-13.md),
+[Prep for AI and Verified Answers](reports/prep-ai-verified-answers-retest-2026-11-13.md),
+[old vs new Ontology experience](reports/ontology-new-experience-ab-retest-2026-11-14.md),
+[October retest](reports/data-agent-retest-2026-10-07.md),
 [September baseline](reports/data-agent-due-diligence-comparison.md),
 [capacity comparison](reports/capacity-performance-comparison.md),
 [Direct Lake Execute Queries resolution](reports/direct-lake-execute-queries-resolution.md), and
@@ -52,6 +74,8 @@ Details: [October 2026 retest](reports/data-agent-retest-2026-10-07.md) (current
 | Lakehouse-only data agent | `title_insurance_direct_agent` (19 Lakehouse tables, no Ontology) |
 | Semantic-model-only data agent | `title_insurance_semantic_agent` |
 | Hybrid data agent | `title_insurance_hybrid_agent` |
+| Ontology-as-context data agent (Preview) | `title_insurance_ontology_context_agent` ([script](scripts/create_ontology_context_agent.py)) |
+| Prep for AI trial (isolated copy) | `title_iq_sm_prep_ai_trial` + `title_insurance_semantic_agent_prep_ai_trial` ([script](scripts/create_prep_ai_trial.py)) |
 | Optional external app | Azure Function on Flex Consumption with Entra sign-in ([runbook](docs/external-agent-app.md)) |
 
 ## Architecture
@@ -99,6 +123,12 @@ az login
 ```
 
 Run `scripts/manage_capacity.py pause` when the POC is idle. A Fabric capacity is billed while it runs.
+
+For the Ontology-as-context experiment, install the optional `ontology-context` dependency, then run
+`scripts/create_ontology_context_agent.py` and
+`scripts/benchmark_agent.py --agent context --questions-file benchmark/due_diligence_questions.yaml`.
+On x64 Python, set `DOTNET_ROOT` to your x64 .NET install first. For the semantic-model experiment, use
+`scripts/create_prep_ai_trial.py`; authoring a Verified Answer is an interactive Power BI step.
 
 ## Safety and validation
 
