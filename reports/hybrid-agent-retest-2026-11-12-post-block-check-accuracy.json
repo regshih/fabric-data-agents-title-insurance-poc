@@ -1,0 +1,29 @@
+{
+  "responses_file": "reports\\hybrid-agent-retest-2026-11-12-post-block-check-responses.csv",
+  "count": 1,
+  "correct": 0,
+  "partial": 0,
+  "incorrect": 1,
+  "full_accuracy": 0.0,
+  "partial_credit_accuracy": 0.0,
+  "mean_fact_recall": 0.0,
+  "by_class": {
+    "Relationship": {
+      "incorrect": 1
+    }
+  },
+  "questions": [
+    {
+      "question_id": "R03",
+      "question_class": "Relationship",
+      "repetition": 1,
+      "result": "incorrect",
+      "matched_facts": 0,
+      "required_facts": 2,
+      "fact_recall": 0.0,
+      "order_correct": null,
+      "total_seconds": 20.794
+    }
+  ],
+  "method": "Case-insensitive regex matching against required deterministic facts, with exact first-mention identifier ordering for ranked questions. A human review remains necessary to detect contradictory extra claims."
+}

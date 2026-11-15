@@ -1,0 +1,7 @@
+question_id,question_class,mode,connection_mode,repetition,success,criteria_recall,total_seconds,tool,capacity_sku,agent_runtime,answer
+V01,KPI,warm,fresh,1,True,0.0,9.533,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are **3,246 active title orders** across the **Open, Search, and CommitmentIssued** statuses (per the `Open Title Orders` measure)."
+V02,KPI,warm,fresh,1,True,0.0,8.814,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are 3,246 title orders that have not been completed (statuses Open, Search, or CommitmentIssued)."
+V01,KPI,warm,fresh,2,True,0.0,9.452,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are 3,246 active title orders across the Open, Search, and CommitmentIssued statuses."
+V02,KPI,warm,fresh,2,True,0.0,8.372,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are 3,246 title orders that have not been completed (statuses Open, Search, or CommitmentIssued)."
+V01,KPI,warm,fresh,3,True,0.0,9.264,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are 3,246 active title orders (statuses Open, Search, or CommitmentIssued)."
+V02,KPI,warm,fresh,3,True,0.0,9.525,DataAgent_title_insurance_semantic_agent_prep_ai_trial,F32,standard,"There are 3,246 title orders that have not been completed (statuses Open, Search, or CommitmentIssued)."

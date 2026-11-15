@@ -23,6 +23,9 @@ REPORT_PREFIXES = {
     "ontology": "ontology-agent",
     "semantic": "semantic-agent",
     "hybrid": "hybrid-agent",
+    "context": "ontology-context-agent",
+    "context_v2": "ontology-v2-context-agent",
+    "prep_ai": "semantic-prep-ai-agent",
 }
 
 
@@ -108,6 +111,24 @@ async def run(args: argparse.Namespace) -> None:
             "hybrid_agent_published",
             "hybrid-agent",
             state.get("hybrid_agent_runtime", "standard"),
+        ),
+        "context": (
+            "ontology_context_agent_id",
+            "ontology_context_agent_published",
+            "ontology-context-agent",
+            state.get("ontology_context_agent_runtime", "preview"),
+        ),
+        "context_v2": (
+            "ontology_v2_context_agent_id",
+            "ontology_v2_context_agent_published",
+            "ontology-v2-context-agent",
+            state.get("ontology_v2_context_agent_runtime", "preview"),
+        ),
+        "prep_ai": (
+            "prep_ai_data_agent_id",
+            "prep_ai_agent_published",
+            "semantic-prep-ai-agent",
+            state.get("prep_ai_agent_runtime", "standard"),
         ),
     }
     id_key, published_key, report_prefix, agent_runtime = agent_config[args.agent]
@@ -200,7 +221,7 @@ async def run(args: argparse.Namespace) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--agent", choices=["direct", "ontology", "semantic", "hybrid"], default="ontology")
+    parser.add_argument("--agent", choices=["direct", "ontology", "semantic", "hybrid", "context", "context_v2", "prep_ai"], default="ontology")
     parser.add_argument("--mode", choices=["cold", "warm"], default="warm")
     parser.add_argument("--repetitions", type=int, default=1)
     parser.add_argument("--limit", type=int, default=0, help="Run only the first N questions; zero runs all")

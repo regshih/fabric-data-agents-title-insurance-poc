@@ -1,0 +1,24 @@
+{
+  "count": 17,
+  "successful_count": 17,
+  "failed_count": 0,
+  "success_rate": 1.0,
+  "mean": 13.126058823529412,
+  "p50": 11.09,
+  "p90": 13.143,
+  "p95": 24.827,
+  "minimum": 8.334,
+  "maximum": 33.494,
+  "all_call_latency": {
+    "mean": 13.126058823529412,
+    "p50": 11.09,
+    "p90": 13.143,
+    "p95": 24.827,
+    "minimum": 8.334,
+    "maximum": 33.494
+  },
+  "failed_call_seconds": [],
+  "agent": "ontology",
+  "connection_mode": "fresh",
+  "report_prefix": "ontology-agent-retest-2026-11-12-standard-f32"
+}

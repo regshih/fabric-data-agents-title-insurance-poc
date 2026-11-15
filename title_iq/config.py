@@ -21,6 +21,7 @@ class PocConfig:
     lakehouse_name: str
     semantic_model_name: str
     ontology_name: str
+    ontology_context_agent_name: str
     data_agent_name: str
     semantic_data_agent_name: str
     hybrid_data_agent_name: str
@@ -47,6 +48,7 @@ def load_config(path: str | Path = "config/poc.yaml") -> PocConfig:
         lakehouse_name=env.get("FABRIC_LAKEHOUSE_NAME", fabric["lakehouse_name"]),
         semantic_model_name=fabric["semantic_model_name"],
         ontology_name=env.get("FABRIC_ONTOLOGY_NAME", fabric["ontology_name"]),
+        ontology_context_agent_name=fabric["ontology_context_agent_name"],
         data_agent_name=env.get("FABRIC_DATA_AGENT_NAME", fabric["data_agent_name"]),
         semantic_data_agent_name=env.get(
             "FABRIC_SEMANTIC_DATA_AGENT_NAME", fabric["semantic_data_agent_name"]
